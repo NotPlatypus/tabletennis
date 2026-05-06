@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ping Pong Wiki</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-sadrzaj">
+            <h1>Ping Pong Wiki</h1>
+            <nav>
+                <a href="#oprema">Oprema</a>
+                <a href="#pravila">Pravila</a>
+                <a href="#predlog">Predlozi</a>
+            </nav>
+            <button id="dugme-dark-mode">Tamna tema</button>
+        </div>
+    </header>
+
+    <section id="oprema">
+        <h2>Oprema za stoni tenis</h2>
+
+
+        <div class="kontrole">
+            <input type="text" id="polje-pretrage" placeholder="Pretrazi opremu...">
+
+            <div id="dugmad-filtera">
+                <button class="filter-dugme aktivno" data-kategorija="sve">Sve</button>
+                <button class="filter-dugme" data-kategorija="reket">Reketi</button>
+                <button class="filter-dugme" data-kategorija="loptica">Lopice</button>
+                <button class="filter-dugme" data-kategorija="sto">Stolovi</button>
+            </div>
+        </div>
+
+        <div id="kartice-kontejner">
+
+
+            <div class="kartica" data-kategorija="reket"
+                 data-naziv="Napadacki reket"
+                 data-opis="Napadacki reket je napravljen za brzu, agresivnu igru. Drvo je tvrdje i lakse, sto omogucava brze udarce sa velikom snagom. Gume su obicno brze i imaju manje kontrole. Ovaj tip reketa koriste iskusni igaci koji preferiraju ofanzivni stil igre i brze razmene.">
+                <h3>Napadacki reket</h3>
+                <span class="oznaka-kategorije">Reket</span>
+                <p>Reket za brzu, agresivnu igru. Tvrdje drvo i brze gume daju veliku snagu udarca uz manje kontrole.</p>
+            </div>
+
+            <div class="kartica" data-kategorija="reket"
+                 data-naziv="Odbrambeni reket"
+                 data-opis="Odbrambeni reket ima medje drvo i sporije gume koje usporavaju loptu i daju igacu vise vremena za reakciju. Koristi se u defanzivnom stilu igre gde je cilj da se protivnik izmori i natera na gresku. Igaci koji koriste ovaj reket cesto igraju daleko od stola.">
+                <h3>Odbrambeni reket</h3>
+                <span class="oznaka-kategorije">Reket</span>
+                <p>Namenjen defanzivnoj igri. Mekse drvo i sporije gume daju vise kontrole i usporavaju loptu.</p>
+            </div>
+
+            <div class="kartica" data-kategorija="reket"
+                 data-naziv="All-round reket"
+                 data-opis="All-round reket je balansiran izmedju napada i odbrane. Pogodan je za pocetnike i srednje napredne igrace jer ne zahteva izrazito agresivnu ni defanzivnu tehniku. Drvo je srednje tvrdoce, a gume daju solidnu kombinaciju brzine i kontrole.">
+                <h3>All-round reket</h3>
+                <span class="oznaka-kategorije">Reket</span>
+                <p>Balansiran reket za sve stilove igre. Idealan za pocetnike i rekreativce koji zele kontrolu i solidnu brzinu.</p>
+            </div>
+
+            <div class="kartica" data-kategorija="reket"
+                 data-naziv="Penholder reket"
+                 data-opis="Penholder reket ima kracu drzalicu i drzi se kao pero, otuda i naziv. Veoma je popularan u azijskim zemljama, posebno u Kini i Japanu. Omogucava brze uderce zglobom i specificnu tehniku bekhendom. Zahteva poseban stil ucenja koji se razlikuje od evropske tehnike.">
+                <h3>Penholder reket</h3>
+                <span class="oznaka-kategorije">Reket</span>
+                <p>Kratka drzalica slicna drzanju olovke. Popularan u azijskim stilovima igre, posebno u Kini i Japanu.</p>
+            </div>
+
+            <div class="kartica" data-kategorija="reket"
+                 data-naziv="Reket sa dugackom drskom"
+                 data-opis="Reket sa dugackom drskom, poznat i kao Straight reket, ima ravnu i duzu drzalicu. Neki igaci smatraju da ovaj tip pruzala bolju stabilnost u ruci tokom dugackih razmena. Manje je rasprostranjen od standardnih tipova, ali ima svoju vernu grupu korisnika.">
+                <h3>Reket sa dugackom drskom</h3>
+                <span class="oznaka-kategorije">Reket</span>
+                <p>Ravna, duza drska koja nekima prija vise od standardne. Pruza stabilnost tokom dugackih razmena.</p>
+            </div>
+
+
+            <div class="kartica" data-kategorija="loptica"
+                 data-naziv="Jednozvezdica"
+                 data-opis="Jednozvezdicne loptice su najjeftinije i namenjene su iskljucivo za trening i pocetnike. Kvalitet je nizi, a loptice se brze ostecuju pri jacim udarcima. Cesto se koriste u skolama i klubovima za decu koja tek uce igru i gde se trosi veliki broj loptica.">
+                <h3>Jednozvezdica</h3>
+                <span class="oznaka-kategorije">Loptica</span>
+                <p>Pocetnicke loptice namenjene iskljucivo za trening. Nizi kvalitet, brze se trose pri jacim udarcima.</p>
+            </div>
+
+            <div class="kartica" data-kategorija="loptica"
+                 data-naziv="Dvozvezdica"
+                 data-opis="Dvozvedicne loptice su boljeg kvaliteta od jednozvezdicnih i koriste se za rekreativnu igru i trening na naprednijem nivou. Imaju bolji odskok i trajnost. Preporucuju se za igrace koji vec naucili osnove i zele da poboljsaju svoju igru.">
+                <h3>Dvozvezdica</h3>
+                <span class="oznaka-kategorije">Loptica</span>
+                <p>Solidan kvalitet za rekreativnu igru i napredni trening. Bolji odskok i duze traju od jednozvezdicnih.</p>
+            </div>
+
+            <div class="kartica" data-kategorija="loptica"
+                 data-naziv="Trozvezdica"
+                 data-opis="Trozvedicne loptice su takmicarski standard i jedine se koriste na zvanicnim turnirima. Moraju zadovoljiti stroge ITTF standarde u pogledu precnika, tezine i oblika. Jednoobrazni su i predvidivi u ponasanju, sto je kljucno za fer takmicenje.">
+                <h3>Trozvezdica</h3>
+                <span class="oznaka-kategorije">Loptica</span>
+                <p>Takmicarski standard. Jedine koje se koriste na zvanicnim turnirima. Ispunjavaju stroge ITTF standarde.</p>
+            </div>
+
+            <div class="kartica" data-kategorija="loptica"
+                 data-naziv="Plasticna loptica"
+                 data-opis="Plasticne loptice su uvedene od strane ITTF 2015. godine kao zamena za celuloidne. Pravljene su od ABS plastike i nesto su sporije i manje elasticne od celuloidnih. Zahtevaju odredjenu prilagodbu igre, posebno u tehnikama tocenja koje su nesto oslabljene.">
+                <h3>Plasticna loptica</h3>
+                <span class="oznaka-kategorije">Loptica</span>
+                <p>Uvedena 2015. godine, pravi se od ABS plastike. Nesto sporija od celuloidne, ITTF standard od 2015.</p>
+            </div>
+
+            <div class="kartica" data-kategorija="loptica"
+                 data-naziv="Celuloidna loptica"
+                 data-opis="Celuloidne loptice su bile standard vise od sto godina pre nego sto ih je ITTF zabranio na zvanicnim takmicenjima 2015. godine. Mnogi iskusni igaci i dalje ih preferiraju za trening jer smatraju da bolje prenose rotaciju i da imaju prirodniji odskok od plasticnih.">
+                <h3>Celuloidna loptica</h3>
+                <span class="oznaka-kategorije">Loptica</span>
+                <p>Stari standard pre 2015. godine. Vise se ne koristi na takmicenjima, ali je omiljena za trening kod iskusnih igaca.</p>
+            </div>
+
+
+            <div class="kartica" data-kategorija="sto"
+                 data-naziv="Takmicarski sto"
+                 data-opis="Takmicarski stolovi moraju ispunjavati ITTF standarde: dimenzije 274 x 152,5 cm, visina 76 cm i odredjenu tvrdocu ploce koja daje pravilan odskok. Ploce su debljine 22 do 25 mm. Stolovi ove klase su teski i skupi, ali su jedini koji se koriste na zvanicnim takmicenjima i u ozbiljnim klubovima.">
+                <h3>Takmicarski sto</h3>
+                <span class="oznaka-kategorije">Sto</span>
+                <p>Ispunjava ITTF standarde: 274 x 152,5 cm, visina 76 cm. Debela ploca za pravilan odskok, obavezan na turnirima.</p>
+            </div>
+
+            <div class="kartica" data-kategorija="sto"
+                 data-naziv="Rekreativni sto"
+                 data-opis="Rekreativni stolovi su lakseg i jednostavnijeg dizajna i namenjeni su kucanskoj upotrebi ili rekreativnim centrima. Ploca je tanja od takmicarse i odskok moze biti nejednak. Cesto se sklapaju radi lakseg odlaganja. Dobar su izbor za porodicnu zabavu bez visokih zahteva.">
+                <h3>Rekreativni sto</h3>
+                <span class="oznaka-kategorije">Sto</span>
+                <p>Lakseg dizajna za kucansku i rekreativnu upotrebu. Tanja ploca, cesto sklopiv. Idealan za porodicnu zabavu.</p>
+            </div>
+
+            <div class="kartica" data-kategorija="sto"
+                 data-naziv="Mini sto"
+                 data-opis="Mini stolovi su smanjene verzije standardnog stola i namenjeni su pre svega deci i prostorima gde nema dovoljno mesta za puni sto. Dimenzije variraju, ali su obicno upola manji od standardnog. Pravila igre se prilagodjavaju velicini stola.">
+                <h3>Mini sto</h3>
+                <span class="oznaka-kategorije">Sto</span>
+                <p>Smanjena verzija za decu i male prostore. Dimenzije variraju, pravila se prilagodjavaju velicini stola.</p>
+            </div>
+
+            <div class="kartica" data-kategorija="sto"
+                 data-naziv="Sto za otvoreni prostor"
+                 data-opis="Stolovi za otvoreni prostor su napravljeni od materijala otpornih na kisu, uv zracenje i temperaturu. Ploca je obicno od aluminijuma ili specijalnog betona. Cesti su u parkovima i skolskim dvoristima. Odskok se razlikuje od unutrasnjeg stola zbog tvrdje ploca.">
+                <h3>Sto za otvoreni prostor</h3>
+                <span class="oznaka-kategorije">Sto</span>
+                <p>Otporan na kisu i UV zracenje. Ploca od aluminijuma ili betona, cest u parkovima i skolskim dvoristima.</p>
+            </div>
+
+        </div>
+
+
+        <p id="poruka-nema-rezultata" style="display:none;">Nema opreme koja odgovara pretrazi.</p>
+    </section>
+
+
+    <div id="modal-overlay">
+        <div id="modal-sadrzaj">
+            <button id="modal-zatvori">Zatvori</button>
+            <h2 id="modal-naziv"></h2>
+            <p id="modal-opis"></p>
+        </div>
+    </div>
+
+    <section id="pravila">
+        <h2>Osnovna pravila igre</h2>
+        <p class="uvod-tekst">Klikni na pitanje da vidis odgovor.</p>
+
+        <div class="accordion-stavka">
+            <div class="accordion-pitanje">Koliko poena je potrebno za pobedu u setu?</div>
+            <div class="accordion-odgovor">
+                <p>Set se igra do 11 poena. Igrac koji prvi dostigne 11 poena osvaja set, pod uslovom da ima prednost od najmanje 2 poena. Ako je rezultat 10:10, igra se nastavlja dok jedan igrac ne stekne prednost od 2 poena, na primer 12:10 ili 13:11.</p>
+            </div>
+        </div>
+
+        <div class="accordion-stavka">
+            <div class="accordion-pitanje">Koliko setova se igra u mecu?</div>
+            <div class="accordion-odgovor">
+                <p>Mec se obicno igra na tri dobijena seta (ukupno do 5 setova) ili na cetiri dobijena seta (ukupno do 7 setova). Format zavisi od takmicenja. Na Olimpijskim igrama i vecini medjunarodnih turnira koristi se format na cetiri dobijena seta.</p>
+            </div>
+        </div>
+
+        <div class="accordion-stavka">
+            <div class="accordion-pitanje">Kako se servira u stonom tenisu?</div>
+            <div class="accordion-odgovor">
+                <p>Loptica mora biti na dlanu otvorene ruke, podignuta vertikalno najmanje 16 cm i udarena tako da prvo odskoci na strani servera, a zatim predje preko mreze i odskoci na strani primaoca. Loptica mora biti vidljiva tokom celog servisa.</p>
+            </div>
+        </div>
+
+        <div class="accordion-stavka">
+            <div class="accordion-pitanje">Ko servira prvi i koliko puta?</div>
+            <div class="accordion-odgovor">
+                <p>Pravo prvog servisa odredjuje se zrebom ili dogovorom. Svaki igrac servira naizmenicno po dva puta. Izuzetak je stanje 10:10, kada se servis menja posle svakog poena sve do kraja seta.</p>
+            </div>
+        </div>
+
+        <div class="accordion-stavka">
+            <div class="accordion-pitanje">Kada se ponavlja servis (let)?</div>
+            <div class="accordion-odgovor">
+                <p>Servis se ponavlja kada loptica pri servisu dotakne mrezu ili nosac mreze i zatim padne na stranu primaoca. Takodje se ponavlja ako primalac nije bio spreman za prijem. U oba slucaja nema gubitka poena i servis se igra ponovo.</p>
+            </div>
+        </div>
+
+        <div class="accordion-stavka">
+            <div class="accordion-pitanje">Koja je zvanicna velicina stola i mreze?</div>
+            <div class="accordion-odgovor">
+                <p>Zvanicni sto je dugacak 274 cm, sirok 152,5 cm i visok 76 cm. Mreza je visoka 15,25 cm i proteze se 15,25 cm sa svake strane stola. Zvanicna loptica ima precnik 40 mm i tezinu 2,7 grama.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="predlog">
+        <h2>Predlozi opreme</h2>
+        <p class="uvod-tekst">Predlozi novu opremu za dodavanje na sajt.</p>
+
+        <form id="forma-predloga" novalidate>
+
+            <div class="polje-forme">
+                <label for="ime-korisnika">Tvoje ime:</label>
+                <input type="text" id="ime-korisnika" placeholder="Unesi ime">
+            </div>
+
+            <div class="polje-forme">
+                <label for="naziv-opreme">Naziv opreme:</label>
+                <input type="text" id="naziv-opreme" placeholder="Npr. Butterfly Balsa Carbon">
+            </div>
+
+            <div class="polje-forme">
+                <label for="kategorija-opreme">Kategorija:</label>
+                <select id="kategorija-opreme">
+                    <option value="">-- Izaberi kategoriju --</option>
+                    <option value="reket">Reket</option>
+                    <option value="loptica">Loptica</option>
+                    <option value="sto">Sto</option>
+                </select>
+            </div>
+
+            <div class="polje-forme">
+                <label for="komentar">Komentar:</label>
+                <textarea id="komentar" placeholder="Ukratko opisi opremu..."></textarea>
+            </div>
+
+            <button type="submit" id="dugme-posalji">Posalji predlog</button>
+
+            <p id="poruka-greske" class="poruka-greske" style="display:none;"></p>
+            <p id="poruka-uspeha" class="poruka-uspeha" style="display:none;">Predlog je uspesno poslat. Hvala!</p>
+
+        </form>
+    </section>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+
+<!--
+    Aleksa Stanojevic
+    Ping Pong Wiki
+
+    1. pretraga kartica
+    2. filter po kategoriji
+    3. modal na klik
+    4. accordion pravila
+    5. forma sa validacijom
+    6. dark mode
+-->
+
+
+</body>
+</html>

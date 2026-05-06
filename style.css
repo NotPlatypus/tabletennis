@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #ffffff;
+    color: #111111;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+body.tamna-tema {
+    background-color: #1a1a1a;
+    color: #eeeeee;
+}
+
+body.tamna-tema header,
+
+
+body.tamna-tema .kartica {
+    background-color: #2a2a2a;
+    border-color: #555555;
+    color: #eeeeee;
+}
+
+body.tamna-tema .kartica p {
+    color: #cccccc;
+}
+
+body.tamna-tema .kartica h3 {
+    color: #66bb66;
+}
+
+body.tamna-tema .accordion-pitanje {
+    background-color: #2a2a2a;
+    color: #eeeeee;
+}
+
+body.tamna-tema .accordion-odgovor {
+    background-color: #222222;
+}
+
+body.tamna-tema input,
+body.tamna-tema select,
+body.tamna-tema textarea {
+    background-color: #2a2a2a;
+    color: #eeeeee;
+    border-color: #555555;
+}
+
+body.tamna-tema #modal-sadrzaj {
+    background-color: #2a2a2a;
+    color: #eeeeee;
+}
+
+body.tamna-tema code,
+body.tamna-tema pre {
+    color: #eeeeee;
+}
+
+body.tamna-tema .filter-dugme {
+    background-color: #2a2a2a;
+    color: #eeeeee;
+    border-color: #555555;
+}
+
+body.tamna-tema .filter-dugme.aktivno {
+    background-color: #1a6b1a;
+    color: #ffffff;
+}
+
+
+header {
+    background-color: #1a6b1a;
+    color: #ffffff;
+    padding: 14px 20px;
+}
+
+.header-sadrzaj {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    font-size: 20px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 14px;
+    font-size: 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+#dugme-dark-mode {
+    margin-left: auto;
+    padding: 6px 12px;
+    background-color: #ffffff;
+    color: #1a6b1a;
+    border: none;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+section {
+    max-width: 960px;
+    margin: 36px auto;
+    padding: 0 20px;
+}
+
+section h2 {
+    font-size: 19px;
+    color: #1a6b1a;
+    border-bottom: 2px solid #1a6b1a;
+    padding-bottom: 5px;
+    margin-bottom: 14px;
+}
+
+.uvod-tekst {
+    color: #666666;
+    font-size: 14px;
+    margin-bottom: 14px;
+}
+
+
+#polje-pretrage {
+    display: block;
+    width: 100%;
+    max-width: 340px;
+    padding: 7px 10px;
+    font-family: sans-serif;
+    font-size: 15px;
+    border: 1px solid #aaaaaa;
+    margin-bottom: 12px;
+}
+
+#polje-pretrage:focus {
+    outline: none;
+    border-color: #1a6b1a;
+}
+
+#dugmad-filtera {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.filter-dugme {
+    padding: 5px 12px;
+    font-family: sans-serif;
+    font-size: 14px;
+    border: 1px solid #1a6b1a;
+    background-color: #ffffff;
+    color: #1a6b1a;
+    cursor: pointer;
+}
+
+
+.filter-dugme.aktivno {
+    background-color: #1a6b1a;
+    color: #ffffff;
+}
+
+
+#kartice-kontejner {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 14px;
+}
+
+.kartica {
+    border: 1px solid #cccccc;
+    padding: 12px;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+.kartica:hover {
+    border-color: #1a6b1a;
+}
+
+.kartica h3 {
+    font-size: 15px;
+    color: #1a6b1a;
+    margin-bottom: 4px;
+}
+
+.oznaka-kategorije {
+    display: inline-block;
+    font-size: 12px;
+    background-color: #d4edda;
+    color: #1a6b1a;
+    padding: 1px 7px;
+    margin-bottom: 7px;
+}
+
+.kartica p {
+    font-size: 13px;
+    color: #333333;
+}
+
+#poruka-nema-rezultata {
+    color: #888888;
+    font-style: italic;
+    margin-top: 8px;
+}
+
+
+#modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal-overlay.aktivan {
+    display: flex;
+}
+
+#modal-sadrzaj {
+    background-color: #ffffff;
+    border: 1px solid #aaaaaa;
+    padding: 22px;
+    max-width: 480px;
+    width: 90%;
+    position: relative;
+}
+
+#modal-zatvori {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #1a6b1a;
+    color: #ffffff;
+    border: none;
+    padding: 4px 10px;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 13px;
+}
+
+#modal-naziv {
+    font-size: 17px;
+    color: #1a6b1a;
+    margin-bottom: 12px;
+    margin-right: 55px;
+}
+
+#modal-opis {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+.accordion-stavka {
+    border: 1px solid #cccccc;
+    margin-bottom: 5px;
+}
+
+.accordion-pitanje {
+    padding: 11px 14px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    font-weight: bold;
+    font-size: 14px;
+    user-select: none;
+}
+
+.accordion-pitanje:hover {
+    background-color: #dff0df;
+}
+
+
+.accordion-pitanje.otvoren {
+    background-color: #1a6b1a;
+    color: #ffffff;
+}
+
+.accordion-odgovor {
+    display: none;
+    padding: 11px 14px;
+    background-color: #fafafa;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+#forma-predloga {
+    max-width: 460px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.polje-forme {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.polje-forme label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.polje-forme input,
+.polje-forme select,
+.polje-forme textarea {
+    padding: 7px 9px;
+    font-family: sans-serif;
+    font-size: 14px;
+    border: 1px solid #aaaaaa;
+    width: 100%;
+}
+
+.polje-forme input:focus,
+.polje-forme select:focus,
+.polje-forme textarea:focus {
+    outline: none;
+    border-color: #1a6b1a;
+}
+
+.polje-forme textarea {
+    resize: vertical;
+    min-height: 85px;
+}
+
+#dugme-posalji {
+    align-self: flex-start;
+    padding: 8px 18px;
+    background-color: #1a6b1a;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#dugme-posalji:hover {
+    background-color: #145214;
+}
+
+.poruka-greske {
+    color: #cc0000;
+    font-size: 14px;
+}
+
+.poruka-uspeha {
+    color: #1a6b1a;
+    font-size: 14px;
+    font-weight: bold;
+}
+
